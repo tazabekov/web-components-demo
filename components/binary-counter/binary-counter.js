@@ -7,6 +7,8 @@ fetch("/components/binary-counter/binary-counter.html")
     class BinaryCounter extends HTMLElement {
         constructor(){
             super();
+            this.attachShadow({ mode: 'open' });
+            this.shadowRoot.appendChild(templateEl.content.cloneNode(true));
         }
     }
     customElements.define("binary-counter", BinaryCounter);
