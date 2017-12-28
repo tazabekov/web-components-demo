@@ -1,6 +1,6 @@
 const templateEl = document.createElement('template');
 templateEl.innerHTML = `
-    <span id="decimal">decimal</span>: <span id="binary" >binary</span>
+    <span id="decimal">decimal</span>: <span id="binary">binary</span>
 `;
 
 export default class BinaryCounter extends HTMLElement {
@@ -8,6 +8,14 @@ export default class BinaryCounter extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(templateEl.content.cloneNode(true));
+    }
+
+    connectedCallback() {
+        if (!this.getAttribute("count")) {
+            this.setAttribute("count", this._count);
+        } else {
+            this.count = this.getAttribute("count");
+        }
     }
 
     static get observedAttributes() { return ["count"]; }
