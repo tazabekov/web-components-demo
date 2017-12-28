@@ -8,6 +8,15 @@ export class BinaryCounter extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(templateEl.content.cloneNode(true));
+        this._count = 11;
+    }
+
+    connectedCallback() {
+        if (!this.getAttribute("count")) {
+            this.setAttribute("count", this._count);
+        } else {
+            this.count = this.getAttribute("count");
+        }
     }
 
     static get observedAttributes() { return ["count"]; }
