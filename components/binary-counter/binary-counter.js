@@ -3,7 +3,7 @@ templateEl.innerHTML = `
     <span id="decimal">decimal</span>: <span id="binary" >binary</span>
 `;
 
-export class BinaryCounter extends HTMLElement {
+export default class BinaryCounter extends HTMLElement {
     constructor(){
         super();
         this.attachShadow({mode: 'open'});
