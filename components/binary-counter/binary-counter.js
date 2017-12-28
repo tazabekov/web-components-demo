@@ -1,6 +1,7 @@
 const templateEl = document.createElement('template');
 templateEl.innerHTML = `
-    <span id="decimal">decimal</span>: <span id="binary" >binary</span>
+    <link rel="stylesheet" href="/components/binary-counter/binary-counter.css">
+    <span id="decimal" class="red">decimal</span>: <span id="binary" >binary</span>
 `;
 
 export default class BinaryCounter extends HTMLElement {
