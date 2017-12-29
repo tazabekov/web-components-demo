@@ -1,5 +1,6 @@
 const templateEl = document.createElement('template');
 templateEl.innerHTML = `
-    <span id="decimal"></span>
-    <span id="binary" ></span>
+<div class="binary-counter">
+    <span id="decimal">decimal</span>: <span id="binary">binary</span>
+</div>
 `;
