@@ -1,7 +1,8 @@
 const templateEl = document.createElement('template');
 templateEl.innerHTML = `
-    <span id="decimal">decimal</span>: <span id="binary"></span>
+    <span id="decimal">decimal</span>: <span id="binary">binary</span>
 `;
+
 
 export class BinaryCounter extends HTMLElement {
 
