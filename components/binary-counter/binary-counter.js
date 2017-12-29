@@ -9,6 +9,7 @@ export default class BinaryCounter extends HTMLElement {
         super();
         this.attachShadow({mode: 'open'});
         this.shadowRoot.appendChild(templateEl.content.cloneNode(true));
+        this._count = 123;
     }
 
     connectedCallback() {
@@ -28,13 +29,12 @@ export default class BinaryCounter extends HTMLElement {
 
     get count() { return this._count; }
     set count(count) {
-        if (this._count !== count) {
-            this._count = parseInt(count);
-            this.setAttribute("count", this._count);
+        this._count = parseInt(count);
+        this.setAttribute("count", this._count);
 
-            this.shadowRoot.querySelector("#decimal").innerHTML = this._count;
-            this.shadowRoot.querySelector("#binary").innerHTML = this._count.toString(2);
-        }
+        this.shadowRoot.querySelector("#decimal").innerHTML = this._count;
+        this.shadowRoot.querySelector("#binary").innerHTML = this._count.toString(2);
+
     }
 }
 
