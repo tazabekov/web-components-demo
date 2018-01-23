@@ -7,13 +7,13 @@
     <script type="text/javascript" src="node_modules/@webcomponents/webcomponentsjs/webcomponents-lite.js"></script>
 </head>
 <body>
+<style>
+    #clock {width: 200px;}
+</style>
+<div id="clock">
+    <lit-clock></lit-clock>
+</div>
 
-<video width="320" height="240" controls>
-    <source src="assets/movie.mp4" type="video/mp4" />
-    <source src="assets/movie.ogg" type="video/ogg" />
-</video>
-
-<lit-clock></lit-clock>
 <script type="module" src="components/lit-clock/lit-clock.js"></script>
 </body>
 </html>
