@@ -19,6 +19,7 @@
   "dependencies": {
     "@webcomponents/webcomponentsjs": "github:webcomponents/webcomponentsjs",
     "bootstrap": "^4.0.0-beta.2",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "lit-html": "^0.8.0"
   }
 }
